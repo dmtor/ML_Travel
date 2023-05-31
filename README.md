@@ -4,4 +4,4 @@ Este proyecto, realizado como estudiante en The Bridge, se enfoca en el análisi
 
 ## Datos
 
-Puedes acceder al [conjunto de datos utilizado en este proyecto](https://www.kaggle.com/datasets/tejashvi14/travel-insurance-prediction-data) y [ver la presentación realizada](https://1drv.ms/p/s!AgChGudJaDvNm3XaLJ2nr3_BuYyX).
+Puedes acceder al [conjunto de datos utilizados en este proyecto](https://www.kaggle.com/datasets/tejashvi14/travel-insurance-prediction-data) y [ver la presentación realizada](https://1drv.ms/p/s!AgChGudJaDvNm3XaLJ2nr3_BuYyX).
