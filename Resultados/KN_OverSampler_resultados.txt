@@ -1,0 +1,10 @@
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', RandomOverSampler()),
+                                       ('classifier', KNeighborsClassifier())]),
+             param_grid={'classifier__n_neighbors': range(3, 31)},
+             scoring='accuracy')
+Accuracy: 0.7562814070351759
+Precision: 0.6746031746031746
+Recall: 0.6028368794326241
+F1 Score: 0.6367041198501872
+ROC AUC Score: 0.7216519027513314

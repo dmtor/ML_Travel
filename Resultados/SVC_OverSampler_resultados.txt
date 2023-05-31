@@ -1,0 +1,12 @@
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', RandomOverSampler()),
+                                       ('classifier', SVC())]),
+             param_grid={'classifier__C': [0.1, 1, 10, 100],
+                         'classifier__gamma': ['scale', 'auto'],
+                         'classifier__kernel': ['linear', 'rbf']},
+             scoring='accuracy')
+Accuracy: 0.7839195979899497
+Precision: 0.7522935779816514
+Recall: 0.5815602836879432
+F1 Score: 0.6559999999999999
+ROC AUC Score: 0.7382509589645943

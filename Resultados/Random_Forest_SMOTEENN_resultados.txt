@@ -1,0 +1,13 @@
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTEENN()),
+                                       ('classifier',
+                                        RandomForestClassifier())]),
+             param_grid={'classifier__max_depth': range(1, 21),
+                         'classifier__min_samples_leaf': [1, 2, 5, 10],
+                         'classifier__min_samples_split': [2, 5, 10, 20]},
+             scoring='accuracy')
+Accuracy: 0.8090452261306532
+Precision: 0.8155339805825242
+Recall: 0.5957446808510638
+F1 Score: 0.6885245901639344
+ROC AUC Score: 0.760907359880785

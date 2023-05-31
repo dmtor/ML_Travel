@@ -1,0 +1,743 @@
+
+Resultados paraBagging (Normal):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('classifier',
+                                        BaggingClassifier(estimator=DecisionTreeClassifier()))]),
+             param_grid={'classifier__estimator__max_depth': [None, 3, 5, 10],
+                         'classifier__n_estimators': [10, 50, 100]},
+             scoring='accuracy')
+Accuracy: 0.8442211055276382
+Precision: 0.9876543209876543
+Recall: 0.5673758865248227
+F1 Score: 0.7207207207207208
+ROC AUC Score: 0.7817424179705825
+Predictions: [0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraBagging (OverSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTE()),
+                                       ('classifier',
+                                        BaggingClassifier(estimator=DecisionTreeClassifier()))]),
+             param_grid={'classifier__estimator__max_depth': [None, 3, 5, 10],
+                         'classifier__n_estimators': [10, 50, 100]},
+             scoring='accuracy')
+Accuracy: 0.8442211055276382
+Precision: 0.9876543209876543
+Recall: 0.5673758865248227
+F1 Score: 0.7207207207207208
+ROC AUC Score: 0.7817424179705825
+Predictions: [0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraBagging (UnderSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', RandomUnderSampler()),
+                                       ('classifier',
+                                        BaggingClassifier(estimator=DecisionTreeClassifier()))]),
+             param_grid={'classifier__estimator__max_depth': [None, 3, 5, 10],
+                         'classifier__n_estimators': [10, 50, 100]},
+             scoring='accuracy')
+Accuracy: 0.8417085427135679
+Precision: 0.975609756097561
+Recall: 0.5673758865248227
+F1 Score: 0.7174887892376682
+ROC AUC Score: 0.7797968926787537
+Predictions: [0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraBagging (SMOTEENN):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTEENN()),
+                                       ('classifier',
+                                        BaggingClassifier(estimator=DecisionTreeClassifier()))]),
+             param_grid={'classifier__estimator__max_depth': [None, 3, 5, 10],
+                         'classifier__n_estimators': [10, 50, 100]},
+             scoring='accuracy')
+Accuracy: 0.8065326633165829
+Precision: 0.82
+Recall: 0.5815602836879432
+F1 Score: 0.6804979253112032
+ROC AUC Score: 0.7557606865910533
+Predictions: [0 1 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0
+ 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0
+ 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0
+ 1 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 1
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraBoosting (Gradient Boosting) (Normal):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('classifier',
+                                        GradientBoostingClassifier())]),
+             param_grid={'classifier__learning_rate': [0.1, 0.01, 0.001],
+                         'classifier__max_depth': [3, 5, 10, 15],
+                         'classifier__n_estimators': [100, 200, 300, 400]},
+             scoring='accuracy')
+Accuracy: 0.8417085427135679
+Precision: 0.975609756097561
+Recall: 0.5673758865248227
+F1 Score: 0.7174887892376682
+ROC AUC Score: 0.7797968926787537
+Predictions: [0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 1 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraBoosting (Gradient Boosting) (OverSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTE()),
+                                       ('classifier',
+                                        GradientBoostingClassifier())]),
+             param_grid={'classifier__learning_rate': [0.1, 0.01, 0.001],
+                         'classifier__max_depth': [3, 5, 10, 15],
+                         'classifier__n_estimators': [100, 200, 300, 400]},
+             scoring='accuracy')
+Accuracy: 0.8442211055276382
+Precision: 0.9876543209876543
+Recall: 0.5673758865248227
+F1 Score: 0.7207207207207208
+ROC AUC Score: 0.7817424179705825
+Predictions: [0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraBoosting (Gradient Boosting) (UnderSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', RandomUnderSampler()),
+                                       ('classifier',
+                                        GradientBoostingClassifier())]),
+             param_grid={'classifier__learning_rate': [0.1, 0.01, 0.001],
+                         'classifier__max_depth': [3, 5, 10, 15],
+                         'classifier__n_estimators': [100, 200, 300, 400]},
+             scoring='accuracy')
+Accuracy: 0.8442211055276382
+Precision: 0.9876543209876543
+Recall: 0.5673758865248227
+F1 Score: 0.7207207207207208
+ROC AUC Score: 0.7817424179705825
+Predictions: [0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraBoosting (Gradient Boosting) (SMOTEENN):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTEENN()),
+                                       ('classifier',
+                                        GradientBoostingClassifier())]),
+             param_grid={'classifier__learning_rate': [0.1, 0.01, 0.001],
+                         'classifier__max_depth': [3, 5, 10, 15],
+                         'classifier__n_estimators': [100, 200, 300, 400]},
+             scoring='accuracy')
+Accuracy: 0.8065326633165829
+Precision: 0.82
+Recall: 0.5815602836879432
+F1 Score: 0.6804979253112032
+ROC AUC Score: 0.7557606865910533
+Predictions: [0 1 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0
+ 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0
+ 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0
+ 1 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 1
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraAdaBoost (Normal):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('classifier', AdaBoostClassifier())]),
+             param_grid={'classifier__learning_rate': [1.0, 0.5, 0.1],
+                         'classifier__n_estimators': [50, 100, 150]},
+             scoring='accuracy')
+Accuracy: 0.8341708542713567
+Precision: 0.987012987012987
+Recall: 0.5390070921985816
+F1 Score: 0.6972477064220183
+ROC AUC Score: 0.7675580208074619
+Predictions: [0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraAdaBoost (OverSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTE()),
+                                       ('classifier', AdaBoostClassifier())]),
+             param_grid={'classifier__learning_rate': [1.0, 0.5, 0.1],
+                         'classifier__n_estimators': [50, 100, 150]},
+             scoring='accuracy')
+Accuracy: 0.8291457286432161
+Precision: 0.9101123595505618
+Recall: 0.574468085106383
+F1 Score: 0.7043478260869566
+ROC AUC Score: 0.7716698402185611
+Predictions: [0 1 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraAdaBoost (UnderSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', RandomUnderSampler()),
+                                       ('classifier', AdaBoostClassifier())]),
+             param_grid={'classifier__learning_rate': [1.0, 0.5, 0.1],
+                         'classifier__n_estimators': [50, 100, 150]},
+             scoring='accuracy')
+Accuracy: 0.8241206030150754
+Precision: 0.8736842105263158
+Recall: 0.5886524822695035
+F1 Score: 0.7033898305084745
+ROC AUC Score: 0.7709799376328061
+Predictions: [0 1 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1
+ 1 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 1
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraAdaBoost (SMOTEENN):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTEENN()),
+                                       ('classifier', AdaBoostClassifier())]),
+             param_grid={'classifier__learning_rate': [1.0, 0.5, 0.1],
+                         'classifier__n_estimators': [50, 100, 150]},
+             scoring='accuracy')
+Accuracy: 0.7914572864321608
+Precision: 0.7589285714285714
+Recall: 0.6028368794326241
+F1 Score: 0.6719367588932805
+ROC AUC Score: 0.7488892568369346
+Predictions: [0 1 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 1 0 1
+ 1 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 1 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 1 0 0 1 0 0 0 1 0 1 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0
+ 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1
+ 1 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 1
+ 0 0 0 1 1 1 1 0 0 0 0 0 1 0 0 1 1 1 0 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 1 0 0 0 0 0 1 1 0 0 0 0 1 0 0]
+
+Resultados paraXGBoost (Normal):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('classifier',
+                                        XGBClassifier(base_score=None,
+                                                      booster=None,
+                                                      callbacks=None,
+                                                      colsample_bylevel=None,
+                                                      colsample_bynode=None,
+                                                      colsample_bytree=None,
+                                                      early_stopping_rounds=None,
+                                                      enable_categorical=False,
+                                                      eval_metric=None,
+                                                      feature_types=None,
+                                                      gamma=None, gpu_id=None,
+                                                      grow_policy=None,
+                                                      importance_type=None,
+                                                      interaction_const...
+                                                      max_delta_step=None,
+                                                      max_depth=None,
+                                                      max_leaves=None,
+                                                      min_child_weight=None,
+                                                      missing=nan,
+                                                      monotone_constraints=None,
+                                                      n_estimators=100,
+                                                      n_jobs=None,
+                                                      num_parallel_tree=None,
+                                                      predictor=None,
+                                                      random_state=None, ...))]),
+             param_grid={'classifier__learning_rate': [0.1, 0.01, 0.001],
+                         'classifier__max_depth': [3, 5, 10, 15],
+                         'classifier__n_estimators': [100, 200, 300, 400]},
+             scoring='accuracy')
+Accuracy: 0.8442211055276382
+Precision: 0.9876543209876543
+Recall: 0.5673758865248227
+F1 Score: 0.7207207207207208
+ROC AUC Score: 0.7817424179705825
+Predictions: [0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraXGBoost (OverSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTE()),
+                                       ('classifier',
+                                        XGBClassifier(base_score=None,
+                                                      booster=None,
+                                                      callbacks=None,
+                                                      colsample_bylevel=None,
+                                                      colsample_bynode=None,
+                                                      colsample_bytree=None,
+                                                      early_stopping_rounds=None,
+                                                      enable_categorical=False,
+                                                      eval_metric=None,
+                                                      feature_types=None,
+                                                      gamma=None, gpu_id=None,
+                                                      grow_policy=None,
+                                                      importance_type=No...
+                                                      max_delta_step=None,
+                                                      max_depth=None,
+                                                      max_leaves=None,
+                                                      min_child_weight=None,
+                                                      missing=nan,
+                                                      monotone_constraints=None,
+                                                      n_estimators=100,
+                                                      n_jobs=None,
+                                                      num_parallel_tree=None,
+                                                      predictor=None,
+                                                      random_state=None, ...))]),
+             param_grid={'classifier__learning_rate': [0.1, 0.01, 0.001],
+                         'classifier__max_depth': [3, 5, 10, 15],
+                         'classifier__n_estimators': [100, 200, 300, 400]},
+             scoring='accuracy')
+Accuracy: 0.8442211055276382
+Precision: 0.9876543209876543
+Recall: 0.5673758865248227
+F1 Score: 0.7207207207207208
+ROC AUC Score: 0.7817424179705825
+Predictions: [0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraXGBoost (UnderSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', RandomUnderSampler()),
+                                       ('classifier',
+                                        XGBClassifier(base_score=None,
+                                                      booster=None,
+                                                      callbacks=None,
+                                                      colsample_bylevel=None,
+                                                      colsample_bynode=None,
+                                                      colsample_bytree=None,
+                                                      early_stopping_rounds=None,
+                                                      enable_categorical=False,
+                                                      eval_metric=None,
+                                                      feature_types=None,
+                                                      gamma=None, gpu_id=None,
+                                                      grow_policy=None,
+                                                      impor...
+                                                      max_delta_step=None,
+                                                      max_depth=None,
+                                                      max_leaves=None,
+                                                      min_child_weight=None,
+                                                      missing=nan,
+                                                      monotone_constraints=None,
+                                                      n_estimators=100,
+                                                      n_jobs=None,
+                                                      num_parallel_tree=None,
+                                                      predictor=None,
+                                                      random_state=None, ...))]),
+             param_grid={'classifier__learning_rate': [0.1, 0.01, 0.001],
+                         'classifier__max_depth': [3, 5, 10, 15],
+                         'classifier__n_estimators': [100, 200, 300, 400]},
+             scoring='accuracy')
+Accuracy: 0.8442211055276382
+Precision: 0.9876543209876543
+Recall: 0.5673758865248227
+F1 Score: 0.7207207207207208
+ROC AUC Score: 0.7817424179705825
+Predictions: [0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraXGBoost (SMOTEENN):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTEENN()),
+                                       ('classifier',
+                                        XGBClassifier(base_score=None,
+                                                      booster=None,
+                                                      callbacks=None,
+                                                      colsample_bylevel=None,
+                                                      colsample_bynode=None,
+                                                      colsample_bytree=None,
+                                                      early_stopping_rounds=None,
+                                                      enable_categorical=False,
+                                                      eval_metric=None,
+                                                      feature_types=None,
+                                                      gamma=None, gpu_id=None,
+                                                      grow_policy=None,
+                                                      importance_type...
+                                                      max_delta_step=None,
+                                                      max_depth=None,
+                                                      max_leaves=None,
+                                                      min_child_weight=None,
+                                                      missing=nan,
+                                                      monotone_constraints=None,
+                                                      n_estimators=100,
+                                                      n_jobs=None,
+                                                      num_parallel_tree=None,
+                                                      predictor=None,
+                                                      random_state=None, ...))]),
+             param_grid={'classifier__learning_rate': [0.1, 0.01, 0.001],
+                         'classifier__max_depth': [3, 5, 10, 15],
+                         'classifier__n_estimators': [100, 200, 300, 400]},
+             scoring='accuracy')
+Accuracy: 0.8442211055276382
+Precision: 0.9876543209876543
+Recall: 0.5673758865248227
+F1 Score: 0.7207207207207208
+ROC AUC Score: 0.7817424179705825
+Predictions: [0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraStacking (Normal):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('classifier',
+                                        StackingClassifier(cv=10,
+                                                           estimators=[('svc',
+                                                                        SVC(probability=True)),
+                                                                       ('log_reg',
+                                                                        LogisticRegression()),
+                                                                       ('knn',
+                                                                        KNeighborsClassifier()),
+                                                                       ('decision_tree',
+                                                                        DecisionTreeClassifier())],
+                                                           final_estimator=LogisticRegression()))]),
+             param_grid={}, scoring='accuracy')
+Accuracy: 0.8015075376884422
+Precision: 0.8369565217391305
+Recall: 0.5460992907801419
+F1 Score: 0.6609442060085837
+ROC AUC Score: 0.743866766012639
+Predictions: [0 1 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0
+ 0 0 1 1 1 1 1 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraStacking (OverSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTE()),
+                                       ('classifier',
+                                        StackingClassifier(cv=10,
+                                                           estimators=[('svc',
+                                                                        SVC(probability=True)),
+                                                                       ('log_reg',
+                                                                        LogisticRegression()),
+                                                                       ('knn',
+                                                                        KNeighborsClassifier()),
+                                                                       ('decision_tree',
+                                                                        DecisionTreeClassifier())],
+                                                           final_estimator=LogisticRegression()))]),
+             param_grid={}, scoring='accuracy')
+Accuracy: 0.7839195979899497
+Precision: 0.7165354330708661
+Recall: 0.6453900709219859
+F1 Score: 0.6791044776119403
+ROC AUC Score: 0.7526561249551564
+Predictions: [0 1 1 0 1 0 0 0 0 0 1 1 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0
+ 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 1 1 0 1 1 0 0 0 0
+ 1 0 1 1 0 1 1 0 0 0 1 0 0 0 1 0 0 1 0 1 1 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 1 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 1 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 1 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 1 0 0 0 0 0 1 0 0 0 1 0
+ 1 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 1 0 1 0 0 1 1 1 0 0 0 0 1 0
+ 0 0 1 1 1 1 1 0 0 1 0 0 0 0 0 1 1 0 0 1 0 0 1 0 1 1 1 0 0 0 1 0 1 0 0 0 1
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 0]
+
+Resultados paraStacking (UnderSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', RandomUnderSampler()),
+                                       ('classifier',
+                                        StackingClassifier(cv=10,
+                                                           estimators=[('svc',
+                                                                        SVC(probability=True)),
+                                                                       ('log_reg',
+                                                                        LogisticRegression()),
+                                                                       ('knn',
+                                                                        KNeighborsClassifier()),
+                                                                       ('decision_tree',
+                                                                        DecisionTreeClassifier())],
+                                                           final_estimator=LogisticRegression()))]),
+             param_grid={}, scoring='accuracy')
+Accuracy: 0.7537688442211056
+Precision: 0.6641221374045801
+Recall: 0.6170212765957447
+F1 Score: 0.6397058823529412
+ROC AUC Score: 0.7229075254574054
+Predictions: [0 1 1 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0
+ 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 1 0 1 0 0 0 1 0 0 1 0 1 1 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 1 0 1 0 1 1 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 1 0 1 0 0 0 1 1 0 0 0 1 1 0
+ 0 1 0 0 0 0 0 1 0 0 1 0 0 0 1 0 1 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 1 1 0 0 1 1 0 0 0 1 0 1 0 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0
+ 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 1
+ 1 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 1 0 1 0 1 1 0 0 0 1 0 0 0 0 1 0
+ 0 0 1 1 1 1 1 0 0 1 0 0 1 0 0 1 1 0 0 0 1 0 1 1 1 1 1 0 0 0 0 0 1 0 0 0 1
+ 0 0 0 0 1 1 1 0 1 0 0 1 1 1 0 0 1 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraStacking (SMOTEENN):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTEENN()),
+                                       ('classifier',
+                                        StackingClassifier(cv=10,
+                                                           estimators=[('svc',
+                                                                        SVC(probability=True)),
+                                                                       ('log_reg',
+                                                                        LogisticRegression()),
+                                                                       ('knn',
+                                                                        KNeighborsClassifier()),
+                                                                       ('decision_tree',
+                                                                        DecisionTreeClassifier())],
+                                                           final_estimator=LogisticRegression()))]),
+             param_grid={}, scoring='accuracy')
+Accuracy: 0.7688442211055276
+Precision: 0.696
+Recall: 0.6170212765957447
+F1 Score: 0.6541353383458647
+ROC AUC Score: 0.7345806772083782
+Predictions: [0 1 1 1 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0
+ 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 1 0 1 0 0 1 0 1 1 0 0 0 1 0 0 1 1 0 0 0 0 1
+ 1 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1 0 1 0 1 0 0 0 0
+ 0 0 0 1 1 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 1 0 1 0 0 1 0
+ 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 1 1 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 0 0 0 1 0 0 1 0 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 1 0 0 1 0 0 0 1 1 0 1 0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 0 1
+ 0 0 0 1 0 1 1 0 1 0 0 1 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraVoting (Normal):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('classifier',
+                                        VotingClassifier(estimators=[('svc',
+                                                                      SVC(probability=True)),
+                                                                     ('log_reg',
+                                                                      LogisticRegression()),
+                                                                     ('knn',
+                                                                      KNeighborsClassifier()),
+                                                                     ('decision_tree',
+                                                                      DecisionTreeClassifier())],
+                                                         voting='soft'))]),
+             param_grid={}, scoring='accuracy')
+Accuracy: 0.8015075376884422
+Precision: 0.8297872340425532
+Recall: 0.5531914893617021
+F1 Score: 0.6638297872340426
+ROC AUC Score: 0.7454673400115904
+Predictions: [0 1 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 0 0 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 1 0 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 1 0
+ 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0]
+
+Resultados paraVoting (OverSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTE()),
+                                       ('classifier',
+                                        VotingClassifier(estimators=[('svc',
+                                                                      SVC(probability=True)),
+                                                                     ('log_reg',
+                                                                      LogisticRegression()),
+                                                                     ('knn',
+                                                                      KNeighborsClassifier()),
+                                                                     ('decision_tree',
+                                                                      DecisionTreeClassifier())],
+                                                         voting='soft'))]),
+             param_grid={}, scoring='accuracy')
+Accuracy: 0.7763819095477387
+Precision: 0.7063492063492064
+Recall: 0.6312056737588653
+F1 Score: 0.6666666666666667
+ROC AUC Score: 0.7436184010817672
+Predictions: [0 1 1 1 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0
+ 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 1 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 1
+ 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 1 0 1 0 0
+ 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 1 0 0 0 1 1 0 1 0 1 1 0
+ 1 1 0 0 0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 1 1 0 0 1 1 0 0 0 0 0
+ 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0
+ 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 1 0 1 0 0 1 1 1 0 0 0 0 1 1
+ 0 0 0 1 1 1 1 0 0 1 0 0 0 1 1 1 1 0 0 1 0 1 1 0 1 0 1 0 0 0 0 0 1 0 0 0 1
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0]
+
+Resultados paraVoting (UnderSampler):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', RandomUnderSampler()),
+                                       ('classifier',
+                                        VotingClassifier(estimators=[('svc',
+                                                                      SVC(probability=True)),
+                                                                     ('log_reg',
+                                                                      LogisticRegression()),
+                                                                     ('knn',
+                                                                      KNeighborsClassifier()),
+                                                                     ('decision_tree',
+                                                                      DecisionTreeClassifier())],
+                                                         voting='soft'))]),
+             param_grid={}, scoring='accuracy')
+Accuracy: 0.7613065326633166
+Precision: 0.6666666666666666
+Recall: 0.6524822695035462
+F1 Score: 0.6594982078853048
+ROC AUC Score: 0.7367469713276485
+Predictions: [0 1 1 1 1 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 1 1 0 0
+ 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 1 0 1 0 0 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0
+ 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1
+ 0 0 0 1 1 0 1 1 0 1 0 0 1 0 1 0 1 0 0 0 1 0 0 1 0 1 0 0 0 1 1 0 0 0 0 1 0
+ 0 1 1 0 1 0 0 0 1 0 0 0 0 0 1 0 1 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 1 0 0 0 1 1 0 0 1 1 0
+ 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1
+ 1 0 1 0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 1 0 1 0 0 1 1 1 0 0 0 0 1 1
+ 0 0 0 1 1 1 1 0 0 1 0 0 1 0 0 1 1 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 1 0 0 0 1
+ 0 0 0 0 1 1 1 0 1 0 0 1 1 1 0 0 1 0 0 0 1 1 0 0 0 1 1 0]
+
+Resultados paraVoting (SMOTEENN):
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTEENN()),
+                                       ('classifier',
+                                        VotingClassifier(estimators=[('svc',
+                                                                      SVC(probability=True)),
+                                                                     ('log_reg',
+                                                                      LogisticRegression()),
+                                                                     ('knn',
+                                                                      KNeighborsClassifier()),
+                                                                     ('decision_tree',
+                                                                      DecisionTreeClassifier())],
+                                                         voting='soft'))]),
+             param_grid={}, scoring='accuracy')
+Accuracy: 0.7763819095477387
+Precision: 0.7131147540983607
+Recall: 0.6170212765957447
+F1 Score: 0.6615969581749049
+ROC AUC Score: 0.7404172530838646
+Predictions: [0 1 1 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0
+ 0 0 0 0 1 0 0 0 0 1 1 1 0 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0
+ 1 0 1 1 0 1 0 0 1 0 1 0 0 0 1 1 0 1 0 0 1 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0
+ 1 0 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 1 0 0 0 1
+ 0 0 0 1 1 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 1 0 1 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0
+ 0 0 1 1 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 1 0 0
+ 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 1 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 0 1 1 0 0 0 0 1 1
+ 0 0 0 1 1 1 1 0 1 1 0 0 1 0 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 0 1
+ 0 0 0 0 0 1 1 0 1 0 0 1 1 1 1 0 0 0 0 0 1 0 0 0 0 1 0 0]

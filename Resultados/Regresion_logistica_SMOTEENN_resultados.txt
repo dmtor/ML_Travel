@@ -1,0 +1,12 @@
+GridSearchModel: GridSearchCV(cv=10,
+             estimator=Pipeline(steps=[('sampler', SMOTEENN()),
+                                       ('classifier',
+                                        LogisticRegression(solver='liblinear'))]),
+             param_grid={'classifier__C': [0.001, 0.01, 0.1, 1, 10, 100],
+                         'classifier__penalty': ['l1', 'l2']},
+             scoring='accuracy')
+Accuracy: 0.7286432160804021
+Precision: 0.6259541984732825
+Recall: 0.5815602836879432
+F1 Score: 0.6029411764705882
+ROC AUC Score: 0.6954494025443607
